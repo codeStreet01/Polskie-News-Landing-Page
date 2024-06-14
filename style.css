@@ -1,13 +1,8 @@
-@font-face {
-  font-family: Clash Display;
-  src: url('./assets/ClashDisplay-Variable.ttf') format('truetype'); 
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Clash Display';
+  font-family: 'Helvetica Neue';
 }
 
 html,
@@ -16,26 +11,58 @@ body {
   height: 100%;
 }
 
-#nav{
+#subNav{
   width: 100%;
-  height: 15%;
+  height: 3.5%;
+  background-color: #0B1045;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
   display: flex;
   justify-content: space-between;
-}
-#leftNav{
-  margin-left: 10%;
-  height: 100%;
-  width: 40%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  font-size: 19px;
-  font-weight: 400;
+  position: fixed;
+  z-index: 89999;
 }
 
-#leftNav p span{ 
-  color: #FF5555;
-  font-weight: 700;
+#leftSubNav{
+  font-size: 12px;
+  width: 45%;
+  height: 100%;
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#rightSubNav{
+  font-size: 12px;
+  width: 11%;
+  height: 100%;
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+#nav{
+  width: 100%;
+  height: 9%;
+  display: flex;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #D5050D;
+  color: white;
+  position: fixed;
+  top: 3.5%;
+  z-index: 899199;
+
+}
+
+
+#nav h1{
+  font-size: 28px;
 }
 
 #rightNav{
@@ -43,297 +70,307 @@ body {
   width: 25%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+.rightNavLinks{
+  display: flex;
+  font-size: 14px;
+  align-items: center;
 }
 
-#rightNav button{
-  width: 49%;
-  background-color: black;
-  height: 52%;
-  color: white;
-  border: none;
-  font-size: 17px;
-  border-radius: 4px;
+.rightNavLinks img{
+  margin-right: 8px;
 }
 
-#home{
-  width: 100%;
-  height: 100%;
+#searchCircle{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
   background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#container{
+  width: 100%;
+  height: 530%;
+  position: relative;
+  top: 12.5%;
+  background-color:#F7F7F7;
+}
+
+#side-nav{
+  width: 13%;
+  height: 87.5%;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  top: 12.5%;
+  font-size: 14px;
+}
+
+
+#day-date{
+  height: 10%;
+  background-color:#F7F7F7;
+}
+
+#day{
+  color: #D5050D;
+  margin-left: 13%;
+  margin-top: 10%;
+}
+
+
+#date{
+  margin-left: 13%;
+  margin-top: 2%;
+}
+
+.side-nav-news-type{
+  height: 6%;
+  border-bottom: .1px solid rgb(214, 214, 214);
+  display: flex;
+  align-items: center;
+  color: #7c7c7c;
+}
+
+.side-nav-news-type img{
+  margin-left: 13%;
+  margin-right: 5%;
+}
+
+
+
+
+
+
+
+#main-content{
+  width: 87%;
+  height: 100%;
+  position: relative;
+  left: 13%;
   display: flex;
 }
 
-#leftHome{
-  width: 44%;
-  margin-left: 11.5%;
+#main-section{
+  width: 73%;
   height: 100%;
-  position: relative;
 }
 
-#leftHome h1{
-  font-size: 64px;
-  position: absolute;
-  top: 18%;
+#main-section-bottom{
+  width: 100%;
+  height: 73.2%;
+  padding-left: 4.5%;
+  padding-right: 4.5%;
+  padding-top: 4.5%;
 }
 
-#leftHome p{
-  font-size: 19px;
-  position: absolute;
-  top: 39%;
-  color: rgb(135, 135, 135);
-  text-shadow: 1px 1px rgb(214, 214, 214);
-  letter-spacing: 1px;
+#footer-section{
+  width: 100%;
+  height: 12.8%;  
+  padding-left: 4.5%;
+  padding-right: 4.5%;
 }
 
-#GetStartedButton{
-  width: 29%;
-  background-color: black;
-  height: 8%;
-  color: white;
-  border: none;
-  font-size: 17px;
-  border-radius: 4px;
-}
 
-#WatchVideoButton{
-  width: 29%;
-  background-color: white;
-  height: 8%;
-  color: black;
-  border: 1px solid rgb(176, 176, 176);
-  font-size: 17px;
-  border-radius: 4px;
-  margin-left: 3%;
-}
-
-#rightHome{
-  width: 44.5%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-#overlay{
-  left: -2%;
-  position: absolute;
-}
-#overlay1{
-  top: 12%;
-  left: 26%;
-  position: absolute;
-}
-
-#overlay2{
-  position: absolute;
-  top: 6%;
-  left: 10%;
-}
-
-#overlay3{
-  position: absolute;
-  top: -3%;
-  right: 17%;
-}
-
-#star1{
-  position: absolute;
-  left:-15%;
-  width: 7%;
-  top: 5%;
-}
-#A{
-  position: absolute;
-  left: 10%;
-  width: 70%;
-  bottom: -10%;
-}
-
-#features{
+#main-section-bottom-details{
   width: 100%;
   height: 100%;
+  border: .1px solid rgb(192, 192, 192);
+  background-color: white;
+}
+#Business{
+  width: 100%;
+  height: 350px;
+  border: .1px solid rgb(192, 192, 192);
+  padding: 4%;
+}
+#top-section{
   display: flex;
-  overflow: hidden;
+  width: 100%;
+  justify-content: space-between;
+  color:#D5050D;
 }
-#leftFeatures{
-  width: 44%;
-  height: 100%;
-  margin-left: 11.5%;
-  position: relative;
-}
-
-#rightFeatures{
-  width: 44.5%;
-  height: 100%;
-  position: relative;
-  padding-top: 8%;
-}
-
-#FeatureOverlay1{
-  position: absolute;
-  left: -15%;
-  top: -5%;
-}
-
-#FeatureOverlay2{
-  position: absolute;
-  left: 8%;
-  top: 5%;
-  transform: rotate(15deg);
+#top-section p{
+  font-size: 12px;
 }
 
 #title{
-  font-size: 18px;
-  color: #FF5555;
-  font-weight: 400;
-  letter-spacing: 3px;
+  background-color: #D5050D;
+  color: white;
+  width: 100px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  font-size: 12px;
 }
 
-#mainHeading{
-  font-size: 48px;
+#bottom-section{
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.line{
+  width: 100%;
+  height: 1px;
+  background-color: rgb(219, 219, 219);
 }
 
-.subHeading{
-  font-size: 18px;
-  margin-top: 6%;
-  margin-bottom: 2%;
-  font-weight: 600;
+.news{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-evenly;
+  width: 31%;
+  font-size: 12px;
+  height: 100%;
+  overflow: hidden;
 }
-.content{
+
+.sub-title{
   font-size: 18px;
+}
+
+.description{
+  font-size: 12px;
   opacity: .5;
-  width: 80%;
-}
-#FeatureOverlay3{
-  position: absolute;
-  right: 0%;
-  top: -5%;
 }
 
-#advantagesNotification{
+#Sports{
   width: 100%;
-  height: 100%;
-  display: flex;
+  height: 350px;
+  border: .1px solid rgb(192, 192, 192);
+  padding: 4%;
+}
+
+#Politics{
+  width: 100%;
+  height: 350px;
+  border: .1px solid rgb(192, 192, 192);
+  padding: 4%;
+}
+
+#Travel{
+  width: 100%;
+  height: 350px;
+  border: .1px solid rgb(192, 192, 192);
+  padding: 4%;
+}
+
+#MultipleSection{
+  width: 100%;
+  height: 790px;
+  border: .1px solid rgb(192, 192, 192);
+  padding: 4%;
+}
+
+
+#main-section-top{
+  width: 100%;
+  height: 14%;
+  position: relative;
   overflow: hidden;
 }
 
-#leftAdvantagesNotification{
-  width: 44%;
-  height: 100%;
-  margin-left: 11.5%;
-  padding-top: 18%;
-}
 
-
-#rightAdvantagesNotification{
-  width: 44.5%;
-  height: 100%;
-  position: relative;
-}
-#rightAdvantagesNotificationOverlay{
+#cover{
+  width: 100%;
+  height: 600px;
+  background-color: transparent;
   position: absolute;
-  left: -5%;
-}
-
-#advantagesCustomizable{
-  width: 100%;
-  height: 100%;
+  top: 0;
   display: flex;
-  overflow: hidden;
+  justify-content: space-between;
 }
 
-#leftAdvantagesCustomizable{
-  width: 44%;
-  height: 100%;
-  margin-left: 11.5%;
-}
-
-#rightAdvantagesCustomizable{
-  padding-top: 18%;
-  width: 44.5%;
-  height: 100%;
-}
-
-#testimonial{
-  width: 100%;
-  height: 100%;
-}
-.testimonialHeading{
-  text-align: center;
-  color: black;
-}
-#testimonialContent{
-  width: 100%;
-  height: 80%;
+#home-news{
+  width: 65%;
+  height: 90%;
+  background-color: white;
+  margin-top: 6.5%;
+  padding: 1%;
   display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-evenly;
 }
 
-#leftTestimonial{
-  width: 44%;
-  height: 100%;
-  margin-left: 11.5%;
-  position: relative;
-}
 
-#rightTestimonial{
-  padding-top: 10%;
-  width: 44.5%;
+#aside-section{
+  width: 27%;
   height: 100%;
+  padding: 1.5%;
+  background-color: #F7F7F7;
 }
-#leftTestimonialOverlay{
-  position: absolute;
-  top: 0%;
-  left: -20%;
-}
-#rightTestimonial h6{
-  font-size: 28px;
+#latest-insights{
+  width: 100%;
+  height: 380px;
+  background-color: white;
+  margin-top: 5%;
   margin-bottom: 5%;
-  font-weight: 600;
+  border: .1px solid rgb(171, 171, 171);
 }
 
-#rightTestimonial p{
-  font-size: 18px;
-  width: 75%;
-  opacity: .5;
-  line-height: 32px;
-  margin-bottom: 4%;
+.latest-insights-news{
+  width: 100%;
+  height: 33.33%;
+  font-size: 13px;
+  color: #7c7c7c;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.latest-insights-news p{
+  width: 60%;
 }
 
 #footer{
   width: 100%;
-  height: 62%;
-  padding-left: 11.5%;
-  padding-right: 11.5%;
-  padding-top: 5%;
+  height: 100%;
+  background-color: #001031;
+  padding-left: 3.5%;
+  padding-right: 3.5%;
+  padding-top: 3.5%;
   padding-bottom: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  color: white;
 }
+
 #footerData{
   width: 100%;
   height: 73%;
   display: flex;
+  justify-content: space-between;
+
 }
 
 .footerDataClass{
   width: 20%;
-  height: 100%;
+  height: 80%;
   display: flex;
   flex-direction: column;
   align-items:start;
   justify-content: space-between;
 }
 .footerDataClass h6{
-  font-size: 32px;
+  font-size: 18px;
   font-weight: 500;
 }
 
 .footerDataClass button{
-  width: 69%;
-  background-color: black;
-  height: 25%;
-  color: white;
+  width: 78%;
+  background-color: rgb(255, 255, 255);
+  height: 17%;
+  color: black;
   border: none;
   font-size: 17px;
   border-radius: 4px;
@@ -344,4 +381,63 @@ body {
   background-color: black;
   border-radius: 100px;
   opacity: .6;
+}
+
+
+@media (max-width: 768px) {
+  #side-nav {
+    display: none;
+  }
+  .rightNavLinks p{
+    display: none;
+  }
+  .rightNavLinks img{
+    width: 40px;
+  }
+  #rightNav{
+    width: 40%;
+  }
+  .res{
+    display: none;
+  }
+  #rightSubNav img{
+    display: none;
+  }
+  #leftSubNav{
+    width: 37%;
+  }
+  #main-content{
+    display: inline;
+    left: 0%;
+    width: 100%;
+  }
+  #home-news{
+    width: 100%;
+  }
+  #main-section{
+    width: 100%;
+  }
+  #bottom-section{
+    display: inline;
+  }
+  .news{
+    width: 100%;
+    height: 30%;
+  }
+  #Business{
+    height: 23%;
+  }
+  #Sports{
+    height: 23%;
+  }
+  #Politics{
+    height: 23%;
+  }
+  #Travel{
+    height: 23%;
+  }
+  #MultipleSection{
+    height:70%;
+    padding: 0%;
+  }
 }
